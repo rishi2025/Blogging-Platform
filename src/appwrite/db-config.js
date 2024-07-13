@@ -100,8 +100,6 @@ export class Db_Services {
                 query,
             )
 
-            return true;
-
         } catch(error) {
             console.error("Appwrite serive :: getAllPosts :: error", error);
             return false;
@@ -131,8 +129,6 @@ export class Db_Services {
                 config.appwriteBucketId,
                 fileId,
             )
-
-            return true;
 
         } catch(error) {
             console.error("Appwrite serive :: deleteFile :: error", error);

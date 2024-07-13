@@ -8,12 +8,12 @@ function Home() {
 
     useEffect(() => {
         appwriteService.getAllPosts().then((posts) => {
-            if (posts)
-                setPost(posts);
+            if (posts) 
+                setPost(posts.documents);
         })
     }, [])
 
-    if (post.length === 0) {
+    if (!post || post.length === 0) {
         return (
             <div className="w-full py-8 mt-4 text-center">
                 <Container>
@@ -26,18 +26,20 @@ function Home() {
                     </div>
                 </Container>
             </div>
-        )
+        );
     }
 
     return (
         <div className="w-full py-8">
             <Container>
                 <div className='flex flex-wrap'>
-                    {post.map((post) => (
-                        <div key={post.$id} className='p-2 w-1/4'>
-                            <PostCard {...post} />
-                        </div>
-                    ))}
+                    {
+                        post.map((posts) => (
+                            <div key={posts.$id} className='p-2 w-1/4'>
+                                <PostCard {...posts} />
+                            </div>
+                        ))
+                    }
                 </div>
             </Container>
         </div>
