@@ -4,7 +4,7 @@ import "./App.css";
 import authService from "./appwrite/auth.js";
 import { login, logout } from "./store/authSlice.js";
 import { Footer, Header } from "./components/index.jsx";
-// import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -40,7 +40,7 @@ function App() {
             <Header />
             <main>
               {
-                // <Outlet />
+                <Outlet />
               }
             </main>
             <Footer />
