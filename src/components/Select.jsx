@@ -30,6 +30,6 @@ function Select({
             </select>
         </div>
     )
-};a
+};
 
 export default React.forwardRef(Select);
