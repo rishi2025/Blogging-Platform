@@ -85,13 +85,13 @@ function PostForm({post}) {
                 <Input
                     label="Title :"
                     placeholder="Title"
-                    className="mb-4"
+                    className="mb-4 p-1 w-2/3"
                     {...register("title", { required: true })}
                 />
                 <Input
                     label="Slug :"
                     placeholder="Slug"
-                    className="mb-4"
+                    className="mb-4 p-1 w-2/3"
                     {...register("slug", { required: true })}
                     onInput={(e) => {
                         setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
@@ -119,10 +119,10 @@ function PostForm({post}) {
                 <Select
                     options={["active", "inactive"]}
                     label="Status"
-                    className="mb-4"
+                    className="mb-4 mt-12"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full mt-3">
                     {post ? "Update" : "Submit"}
                 </Button>
             </div>

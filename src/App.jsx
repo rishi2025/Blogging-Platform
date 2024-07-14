@@ -35,8 +35,8 @@ function App() {
         <h1>Loading...</h1>
       ):
       (
-        <div className="min-h-screen flex flex-wrap content-between bg-gray-400">
-          <div className="w-full block">
+        <div className="min-h-screen flex flex-wrap content-between bg-blue-300 rounded-xl">
+          <div className="w-full block rounded-xl">
             <Header />
             <main>
               {

@@ -5,6 +5,7 @@ import { Logo, Button, Input } from './index';
 import { useDispatch } from "react-redux";
 import authService from "../appwrite/auth";
 import { useForm } from 'react-hook-form';
+import blogify from "../images/Blogify.png"
 
 function Signup() {
 
@@ -35,10 +36,10 @@ function Signup() {
 
     return (
         <div className="flex items-center justify-center">
-            <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
+            <div className={`mx-auto w-full max-w-lg bg-cyan-100 rounded-xl p-10 border border-black/10`}>
             <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
-                        <Logo width="100%" />
+                        <Logo src={blogify} width="40px" className="rounded-xl" />
                     </span>
                 </div>
                 <h2 className="text-center text-2xl font-bold leading-tight">Sign up to create account</h2>
@@ -89,7 +90,7 @@ function Signup() {
 
                         <Button
                             type="submit"
-                            className="w-full"
+                            className="w-full hover:bg-blue-800"
                         > Create Account
                         </Button>
                     </div>

@@ -14,7 +14,7 @@ function AllPosts() {
 
     return (
         <div className="w-full py-8">
-            <Container>
+            <Container className={"min-h-96"}>
                     <div className="flex flex-wrap">
                         {post.map((postData) => (
                             <div key={postData.$id} className="p-2 w-1/4">

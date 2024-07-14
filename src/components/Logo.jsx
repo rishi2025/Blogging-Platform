@@ -1,8 +1,16 @@
 import React from "react";
 
-function Logo({width = '100px'}) {
+function Logo({src, className = '', width = '100px', alt='Logo', company='BlogiFy', horizontal = false}) {
     return (
-        <div>Logo</div>
+        <div className={`items-center gap-3 text-xl font-bold  ${(horizontal ? "flex flex-col" : "flex flex-row")}`}>
+            <img
+                src={src}
+                className={`${className}`}
+                width={width}
+                alt={alt}
+            />
+            <h4>{company}</h4>
+        </div>
     )
 };
 
