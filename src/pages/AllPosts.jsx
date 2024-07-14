@@ -6,11 +6,7 @@ function AllPosts() {
 
     const [post, setPost] = useState([]);
 
-    useEffect(() => {
-
-    }, []);
-
-    appwriteService.getAllPosts([]).then((posts) => {
+    appwriteService.getAllPosts().then((posts) => {
         if (posts) {
             setPost(posts.documents);
         }
@@ -20,9 +16,9 @@ function AllPosts() {
         <div className="w-full py-8">
             <Container>
                     <div className="flex flex-wrap">
-                        {post.map((post) => (
-                            <div key={post.$id} className="p-2 w-1/4">
-                                <PostCard key={post.$id} post={post} />
+                        {post.map((postData) => (
+                            <div key={postData.$id} className="p-2 w-1/4">
+                                <PostCard key={postData.$id} {...postData} />
                             </div>
                         ))}
                     </div>
