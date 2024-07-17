@@ -23,11 +23,11 @@ export class Db_Services {
                 config.appwriteCollectionId,
                 slug,
                 {
-                    title,
-                    content, 
+                    title, 
                     featured_img,
                     status,
                     user_id,
+                    content,
                 }
             )
 
@@ -36,7 +36,7 @@ export class Db_Services {
         }
     }
 
-    async updatePost(slug, { title, content, featuredImage, status, userId }) {
+    async updatePost(slug, { title, content, featured_img, status, user_id }) {
         try {
 
             return await this.databases.updateDocument(
@@ -45,10 +45,10 @@ export class Db_Services {
                 slug,
                 {
                     title,
-                    content, 
-                    featuredImage,
+                    featured_img,
                     status,
-                    userId,
+                    user_id,
+                    content, 
                 }
             )
 
