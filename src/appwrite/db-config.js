@@ -31,7 +31,8 @@ export class Db_Services {
                 }
             )
 
-        } catch(error) {
+        } catch (error) {
+            alert("Server Error...! Could not create post, please copy the content then reload and try again. Sorry for inconvenience.");
             console.error("Appwrite serive :: createPost :: error", error);
         }
     }
@@ -52,7 +53,8 @@ export class Db_Services {
                 }
             )
 
-        } catch(error) {
+        } catch (error) {
+            alert("Server Error...! Could not update post, please copy the content, then reload and try again. Sorry for inconvenience.");
             console.error("Appwrite serive :: updatePost :: error", error);
         }
     }
@@ -68,7 +70,8 @@ export class Db_Services {
 
             return true;
 
-        } catch(error) {
+        } catch (error) {
+            alert("Server Error...! Could not delete post, please try again. Sorry for inconvenience.");
             console.error("Appwrite serive :: deletePost :: error", error);
             return false;
         }
@@ -83,7 +86,8 @@ export class Db_Services {
                 slug
             )
 
-        } catch(error) {
+        } catch (error) {
+            alert("Server Error...! Could not get the post, please double check the URL and try again. Sorry for inconvenience.");
             console.error("Appwrite serive :: getPost :: error", error);
             return false;
         }
@@ -98,7 +102,8 @@ export class Db_Services {
                 query,
             )
 
-        } catch(error) {
+        } catch (error) {
+            alert("Server Error...! Sorry for inconvenience.");
             console.error("Appwrite serive :: getAllPosts :: error", error);
             return false;
         }
@@ -114,7 +119,8 @@ export class Db_Services {
                 file,
             )
 
-        } catch(error) {
+        } catch (error) {
+            alert("Server Error...! Could not upload file, please try again. Sorry for inconvenience.");
             console.error("Appwrite serive :: uploadFile :: error", error);
             return false;
         }
@@ -128,7 +134,8 @@ export class Db_Services {
                 fileId,
             )
 
-        } catch(error) {
+        } catch (error) {
+            alert("Server Error...! File was not deleted from the server, reach out to us for removing it. Sorry for inconvenience.");
             console.error("Appwrite serive :: deleteFile :: error", error);
             return false;
         }

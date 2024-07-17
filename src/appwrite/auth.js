@@ -24,7 +24,8 @@ export class AuthService {
             else
                 return userAccount;
 
-        } catch(error) {
+        } catch (error) {
+            alert("Something went wrong, Try creating the account again...");
             throw error;
         }
     }
@@ -34,7 +35,8 @@ export class AuthService {
 
             return await this.account.createEmailPasswordSession(email, password);
 
-        } catch(error) {
+        } catch (error) {
+            alert("Oops! Wrong credentials...");
             throw error;
         }
     }
@@ -44,7 +46,8 @@ export class AuthService {
 
             return await this.account.get();
 
-        } catch(error) {
+        } catch (error) {
+            alert("Sorry for inconvenience, something is broken...");
             console.error("Appwrite serive :: getCurrentUser :: error", error);
         }
 
@@ -56,7 +59,8 @@ export class AuthService {
 
             return await this.account.deleteSessions();
 
-        } catch(error) {
+        } catch (error) {
+            alert("Please try for logout again...");
             console.error("Appwrite serive :: logout :: error", error);
         }
     }
