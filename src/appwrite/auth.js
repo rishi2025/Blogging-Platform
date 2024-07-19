@@ -47,7 +47,7 @@ export class AuthService {
             return await this.account.get();
 
         } catch (error) {
-            alert("Sorry for inconvenience, something is broken...");
+            alert("Please Login to read and create blogs...");
             console.error("Appwrite serive :: getCurrentUser :: error", error);
         }
 
